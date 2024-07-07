@@ -1,0 +1,138 @@
+.experience-container {
+    padding: 20px;
+    max-width: 100%; /* Adjusted width for better layout */
+    margin: 0 auto; /* Center the content */
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left; /* Align the title to the left */
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items to the center */
+    position: relative;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    position: relative;
+    margin-bottom: 20px; /* Adjusted margin bottom */
+    opacity: 1;
+    max-width: 500px; /* Adjusted max-width */
+    width: 100%; /* Ensure full width within container */
+    background-color: #f0f0f0;
+    padding: 15px; /* Adjusted padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    width: 2px;
+    height: 20px;
+    background: #333;
+    transition: height 0.3s ease;
+}
+
+.experience-item:last-child::after {
+    display: none;
+}
+
+.experience-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.experience-item:hover::after {
+    height: 40px;
+}
+
+.year-tag {
+    position: absolute;
+    top: -10px;
+    right: calc(100% + 20px); /* Adjusted to create space between year tag and job */
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.job {
+    background-color: #f0f0f0;
+    padding: 15px; /* Adjusted padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.job h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.job p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.certifications-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+}
+
+.certification {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px; /* Added gap between grid items */
+    width: 100%; /* Ensure full width within container */
+    margin-bottom: 40px;
+}
+
+.certification-item {
+    background-color: #f0f0f0;
+    padding: 15px; /* Adjusted padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    width: 100%; /* Ensure full width within container */
+    margin-bottom: -20px; /* Added margin bottom between certification items */
+}
+
+.certification-item h3 {
+    font-size: 1rem;
+    margin-bottom: -10px;
+}
+
+.certification-item p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.certification-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 0.9rem;
+}
+
+.certification-item a:hover {
+    text-decoration: underline;
+}
+
+.arrow-icon {
+    margin-left: 5px;
+    transition: transform 0.2s;
+}
+
+.certification-item a:hover .arrow-icon {
+    transform: translateX(5px);
+}

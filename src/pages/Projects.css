@@ -1,0 +1,108 @@
+.projects-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+}
+
+.container-title {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.container-title h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.container-title .subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+.projects-content {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Two columns with responsive design */
+}
+
+.project-side {
+    display: flex;
+    justify-content: center;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    background-color: #333; /* Dark background color */
+    width: 100%; /* Full width within grid item */
+    max-width: 550px; /* Maximum width for better appearance */
+}
+
+.project-info {
+    position: absolute;
+    top: 30px; /* Margin on top */
+    left: 40px; /* Margin on left */
+    color: #fff;
+    z-index: 1;
+    background-color: #000; /* Solid dark background */
+    padding: 5px 10px; /* Padding for better appearance */
+    border-radius: 4px; /* Optional: for rounded corners */
+}
+
+.project-info h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.project-image {
+    width: 75%; /* 3/4 of the container */
+    height: auto;
+    margin: 20px 0; /* Top and bottom margin */
+    margin-left: auto; /* Align image to the right */
+    transition: transform 2s ease-in-out; /* Slower transition (2x slower) */
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.project-image:hover {
+    transform: scale(1.3); /* Larger zoom effect on hover */
+}
+
+.project-number {
+    position: absolute;
+    bottom: 20px; /* Margin on bottom */
+    left: 10px;
+    color: #fff;
+    opacity: 0.8;
+    margin-left: 10px; /* Margin on the left side */
+    background-color: #000; /* Solid dark background */
+    padding: 5px 10px; /* Padding for better appearance */
+    border-radius: 4px; /* Optional: for rounded corners */
+}
+
+.project-number p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.zoom {
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+video:hover {
+    transform: scale(1.1);
+}

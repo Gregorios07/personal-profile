@@ -1,0 +1,155 @@
+.about-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+}
+
+.container-title {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.container-title h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.container-title .subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+.about-content {
+    display: flex;
+    gap: 20px;
+}
+
+.left-side {
+    flex: 1; /* Smaller side */
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.text-block {
+    margin-bottom: 20px;
+}
+
+.text-block h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.text-block p {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+.right-side {
+    flex: 3; /* Larger side */
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.right-side p {
+    margin-bottom: 20px;
+}
+
+.right-side h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-icon-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.tech-icon {
+    font-size: 2rem;
+    transition: font-size 0.2s ease-in-out;
+}
+
+.tech-icon-container:hover {
+    transform: scale(1.1);
+}
+
+.tech-icon-container:hover .tech-icon {
+    font-size: 2.5rem;
+}
+
+.tech-name {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #666;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.tech-icon-container:hover .tech-name {
+    opacity: 1;
+}
+
+.recommendation-container {
+    margin-top: 20px;
+}
+
+.recommendation {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #333; /* Border around the profile image */
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h3 {
+    margin: 0;
+}
+
+.profile-info p {
+    color: #666;
+    margin: 5px 0 0;
+}
+
+.comment {
+    font-style: italic;
+    color: #666;
+}
