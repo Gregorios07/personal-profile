@@ -1,17 +1,17 @@
 import React, { useRef } from 'react';
 import { useSpring, animated } from '@react-spring/web';
-import profileImage from '../images/profile.png';  // Import the image
-import posterImage from '../images/poster.png'; // Importing your project image
-import sampleVideo from '../videos/sample-video.mp4'; // Importing sample video
+import profileImage from '../images/profile.png';
+import posterImage from '../images/poster.png';
+import sampleVideo from '../videos/sample-video.mp4';
 import ReactTypingEffect from 'react-typing-effect';
-import './Homepage.css';  // Import the CSS file for styling
-import { Link } from 'react-router-dom'; // Assuming you use React Router for navigation
+import './Homepage.css';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
     const styles = useSpring({
         from: { opacity: 0, transform: 'translate3d(0,-40px,0)' },
         to: { opacity: 1, transform: 'translate3d(0,0px,0)' },
-        config: { duration: 1000 }  // Adjust the duration as needed
+        config: { duration: 1000 }
     });
 
     const videoRef = useRef(null);
@@ -25,7 +25,7 @@ const Homepage = () => {
     const handleMouseLeave = () => {
         if (videoRef.current) {
             videoRef.current.pause();
-            videoRef.current.currentTime = 0; // Reset the video to the beginning
+            videoRef.current.currentTime = 0;
         }
     };
 
@@ -35,7 +35,10 @@ const Homepage = () => {
                 <div className="text-section">
                     <h1>Web Developer/Graphic Designer</h1>
                     <ReactTypingEffect
-                        text={["A graduate of Bachelors of Science in Information Technology.", "Proficient in HTML, JavaScript, Mysql, reactJS, Canva and Photoshop."]}
+                        text={[
+                            "A graduate of Bachelors of Science in Information Technology.",
+                            "Proficient in HTML, JavaScript, MySQL, ReactJS, Canva, and Photoshop."
+                        ]}
                         speed={100}
                         eraseSpeed={50}
                         eraseDelay={2000}
@@ -57,12 +60,12 @@ const Homepage = () => {
                             <div className="project-info">
                                 <h2>CCS - Inventory Control System</h2>
                             </div>
-                            <video 
-                                ref={videoRef} 
-                                onMouseEnter={handleMouseEnter} 
-                                onMouseLeave={handleMouseLeave} 
-                                muted // This will mute the video to avoid unwanted noise on hover
-                                loop  // Optional: makes the video loop
+                            <video
+                                ref={videoRef}
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
+                                muted
+                                loop
                             >
                                 <source src={sampleVideo} type="video/mp4" />
                                 Your browser does not support the video tag.
@@ -88,6 +91,6 @@ const Homepage = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Homepage;

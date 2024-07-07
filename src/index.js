@@ -12,10 +12,10 @@ import Homepage from './pages/Homepage';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/personal-profile">
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route path='index' element={<Homepage />} />
+          <Route index element={<Homepage />} />
           <Route path='about' element={<About />} />
           <Route path='projects' element={<Projects />} />
           <Route path='contact' element={<Contact />} />
@@ -29,3 +29,4 @@ export default function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
+git

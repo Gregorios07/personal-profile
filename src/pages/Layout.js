@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaTwitter, FaTiktok, FaBars } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTiktok, FaBars } from 'react-icons/fa';
 import './Layout.css';
 
 function Layout() {
@@ -14,9 +14,9 @@ function Layout() {
         <>
             <header>
                 <div className="left-section">
-                    <NavLink to="/index" className="name-link">
-                        <h1>Leonard Gregorios</h1> {/* Replace 'Your Name' with your actual name */}
-                        <p className="navbar-text">Web Developer</p> {/* Additional text below the name */}
+                    <NavLink to="/" className="name-link">
+                        <h1>Leonard Gregorios</h1>
+                        <p className="navbar-text">Web Developer</p>
                     </NavLink>
                 </div>
                 <nav className="navbar">
@@ -24,7 +24,7 @@ function Layout() {
                     <ul className={isNavVisible ? 'show' : ''}>
                         <li>
                             <NavLink
-                                to="/index"
+                                to="/"
                                 className={({ isActive }) => (isActive ? 'active' : '')}
                                 onClick={toggleNav}
                             >
@@ -90,7 +90,7 @@ function Layout() {
                 </div>
             </header>
 
-            <hr/>
+            <hr />
 
             <div className="content">
                 <Outlet />
